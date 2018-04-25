@@ -1,0 +1,66 @@
+#page
+    background-image url('images/waveFriend05Mobile.jpg')
+    background-repeat no-repeat
+    background-position -39px -90px
+
+
+// ----------- parts layout
+
+.header
+    position relative
+
+    &__relevant
+        background-color rgba(255, 255, 255, .6)
+        
+        &--level2
+            display block
+        
+    &__linkBrand
+        display block
+        margin 5px
+        padding 8px
+
+    &__vectorBrand
+        max-width 320px
+
+    &__nav
+        position absolute
+
+.content
+    &__relevant
+        background-color rgba(255,255,255,0.59)
+        padding 26px
+        margin-top -6px
+        font-size 11vw
+        font-weight 900
+
+        &--level1
+            display block
+
+        @media screen and (orientation: landscape)
+            font-size 7vw
+
+// particula
+.goldSection
+    padding 8px
+    display flex
+    flex-direction column
+    justify-content center
+    align-items flex-end
+
+    text-align right
+    opacity .89
+
+    &__each
+        padding 9px
+        max-width 90%
+        margin-top 4.5px
+        margin-bottom 4.5px
+        
+        color #fff
+        font-weight 700
+
+        background-color sec
+
+.footer
+    margin-top 60px

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<h1 class="content__relevant content__relevant--level1">
+  {{ page.relevanteLv1 }}
+</h1>
+
+<section class="goldSection">
+    {% for section in page.sections %}
+    <section class="goldSection__each">{{ section }}</section>
+    {% endfor %}
+</section>

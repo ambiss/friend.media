@@ -1,0 +1,102 @@
+// style format placeholder
+
+placeholder()
+    &::-webkit-input-placeholder
+        {block}
+    &:-moz-placeholder
+        {block}
+    &::-moz-placeholder
+        {block}
+    &:-ms-input-placeholder
+        {block}
+
+// functions return width and respective height of images JAVASCRIPT API - deeper mixin
+/* use mixin
+ * div#page
+ *   h2
+ *     back('img/goomba.png', 'replacement')
+ */
+ 
+w(img)
+    width image-size(img)[0]
+h(img)
+    height image-size(img)[1]
+
+sback(img, r=false)
+    background url(img) no-repeat 0 0
+    w(img)
+    h(img)
+    if r == true
+        text-indent -9999em
+
+//----------- effects - animates  ----
+transition(property=all, duration=0.3s, effect=ease-in-out) 
+    -webkit-transition property duration effect
+    -moz-transition property duration effect
+    -ms-transition property duration effect
+    transition property duration effect
+
+user-select(value=none) 
+    -webkit-user-select value  
+    -moz-user-select value     
+    -ms-user-select value     
+    user-select value 
+
+//end -------- effects - animates  ----
+
+
+//----------- Selection  ----
+select(back=#333, color=#f1f1f1) 
+    selection 
+        background back
+        color color
+    
+    -moz-selection 
+        background back
+        color color
+    selection 
+        background back
+        color color
+    -moz-selection 
+        background back
+        color color
+    selection 
+        background back
+        color color
+    -moz-selection 
+        background back
+        color color
+    
+//end -------- Selection  ----
+
+appear(v = none) {
+    -webkit-appearance v
+    -moz-appearance    v
+    appearance         v
+}
+
+
+limit($w= 96%, $cl1= 0, $cl2= 0) 
+    margin = $cl1 auto $cl2;
+    
+    width = $w;
+    max-width = 2000px; // for large screen
+    
+    @media screen and (min-width: 1000px) 
+        width 90%
+    @media screen and (min-width: 1200px)  
+        width 88%
+    @media screen and (min-width: 1300px)  
+         width 80%  
+    @media screen and (min-width: 1400px)  
+        width 78%
+    @media screen and (min-width: 1600px)  
+        width 74%
+    @media screen and (min-width: 1700px)  
+        width 69%
+    @media screen and (min-width: 1900px)  
+        width 66%
+
+    // full large ultra wide - 2560px  
+    @media screen and (min-width: 2000px)  
+        width 76%
