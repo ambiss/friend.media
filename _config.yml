@@ -27,7 +27,6 @@ twitter_username: friend__media
 
 # Build settings
 markdown: kramdown
-theme: minima
 permalink: /:title
 plugins:
   - jekyll-feed
