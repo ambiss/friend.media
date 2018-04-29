@@ -5,27 +5,36 @@
 
     <h2 class="footer__relevant footer__relevant--level2">{{ site.title2 | escape }}</h2>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
+    <ul class="footer__list">
+      <li class="footer__each">
+        {%- if site.author -%}
+          {{ site.author | escape }}
+        {%- else -%}
+          {{ site.title | escape }}
+        {%- endif -%}
+      </li>
+        {%- if site.email -%}
+      <li class="footer__each">
+        <div class="footer__eachContencao">
+          <svg class="footer__vector footer__vector--email">
+            <use xlink:href="{{ '/assets/symbols.svg#email' | prepend:site.baseurl }}"></use>
+          </svg>
+          <em class="footer__eachValue">{{ site.email }}</em>
+        </div>
+      </li>
+      <li class="footer__each">
+        <a class="footer__link" href="{{ site.twitter_link }}">
+          <svg class="footer__vector footer__vector--email"><use xlink:href="{{ '/assets/symbols.svg#twitter_circle' | prepend:site.baseurl }}"></use></svg>
+          <em class="footer__eachValue footer__eachValue--twitter">{{ site.twitter_username }}</em>
+        </a>
+      </li>
+        {%- endif -%}
+    </ul>
 
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
+  </div>
 
+  <div class="footer__descFinal">
+    <p>{{- site.description | escape -}}</p>
   </div>
 
 </footer>

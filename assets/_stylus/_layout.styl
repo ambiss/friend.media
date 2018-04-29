@@ -3,11 +3,21 @@
     background-repeat no-repeat
     background-position -39px -90px
 
+    @media screen and (min-width: 359px)
+        background-position-y: -60px
+
+    @media screen and (min-width: 399px)
+        background-position-y: -40px
+
+    @media screen and (orientation: landscape)
+        background-position-y: -133px
+
 
 // ----------- parts layout
 
 .header
     position relative
+    z-index 10
 
     &__relevant
         display block
@@ -17,7 +27,6 @@
             
     &__linkBrand
         display block
-        margin 5px
         padding 8px
 
     &__vectorBrand
@@ -28,11 +37,11 @@
 
 .content
     &__relevant
-        background-color rgba(255,255,255,0.59)
         padding 26px
-        margin-top -6px
+        color main
         font-size 11vw
         font-weight 900
+        background-color rgba(255,255,255,0.59)
 
         &--level1
             display block
@@ -63,4 +72,49 @@
         background-color sec
 
 .footer
-    margin-top 60px
+    margin-top 33px
+    
+    &__relevant
+        padding 20px
+
+    &__list 
+        font-size 20px
+        limit(94%, 0, 20px)
+
+    &__each
+        height 60px
+        margin-bottom 20px
+    
+    &__eachContencao
+        display flex
+        justify-content flex-start
+        align-items center
+    
+    &__eachValue
+        font-size 22px
+        font-family typoMain 
+
+    &__vector
+        display block
+        margin-right 5%
+        width 40%
+        max-width 60px
+        max-height 60px
+        &--email
+            display block
+
+    
+    &__link
+        @extend .footer__eachContencao
+
+    &__descFinal
+        padding 26px
+        color #fff
+        font-weight 700
+        letter-spacing 1px
+        background-color third
+
+    @media screen and (min-width: 374px) 
+        margin-top 18px
+        
+

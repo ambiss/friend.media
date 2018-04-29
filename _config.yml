@@ -10,6 +10,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   dependência do usuários, para que, estes, não só atinjam o obetivo da compra, mas que tenha uma boa experiência. 
 baseurl: "/friend.media"
 url: "http://friend.media"
+
+twitter_link: https://twitter.com/ambiss
 twitter_username: friend__media
 
 # Build settings

@@ -69,19 +69,21 @@ select(back=#333, color=#f1f1f1)
     
 //end -------- Selection  ----
 
-appear(v = none) {
+appear(v = none) 
     -webkit-appearance v
     -moz-appearance    v
     appearance         v
-}
 
 
-limit($w= 96%, $cl1= 0, $cl2= 0) 
-    margin = $cl1 auto $cl2;
+
+limit(w = 96%, cl1 = 0, cl2 = 0) 
+    margin  cl1 auto cl2
     
-    width = $w;
-    max-width = 2000px; // for large screen
+    width  w
+    max-width  2000px // for large screen
     
+    @media screen and (min-width: 768px) 
+        width 94%
     @media screen and (min-width: 1000px) 
         width 90%
     @media screen and (min-width: 1200px)  

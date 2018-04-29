@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}">
+<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}" data-page="{{ page.page }}">
 
   {%- include head.html -%}
 
   <body>
 
-    <div id="page">
+    <div id="page" class="{{ page.page }}">
 
       {%- include header.html -%}
 
