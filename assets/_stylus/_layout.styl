@@ -35,6 +35,21 @@
     &__nav
         position absolute
 
+.inpage
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    width: 290px;
+    
+    &__link
+        color main
+        padding 10px 14px;
+        width 100%
+        max-width 260px
+        
+        &:not(:last-child)
+            border-bottom 1px solid #eee   
+
 .content
     &__relevant
         padding 26px
@@ -102,7 +117,6 @@
         max-height 60px
         &--email
             display block
-
     
     &__link
         @extend .footer__eachContencao

@@ -1,61 +1,88 @@
-.me
-    &__relevant
-        position relative
-
-        &--level1
-            @extend .content__relevant
-            
-
-        &--level2
-            position relative
-            z-index 99
-            
-            &:before 
-                content ''
-                position absolute
-                top 0
-                left 0
-                z-index 0
-
-                width 86%
-                height 100%
-
-                background-color rgba(255, 255, 255, 0.9)
-    
-    &__marcado
-        position relative
-        z-index 10
-
-        display block
-        padding 8px 16px
-
-        color third
-        font-weight 900
-
-    &__novocontexto
-        position relative
-        color #fff
-        font-size 18px
-        padding 40px 0
-
-        &:before
-            content ''
-            position absolute
-            top 0
-            z-index 0
-            width 100%
-            height 100%
-
-            background-color main
-            opacity .8
-
-    &__desc
-        position relative
-        z-index 10
-
-        padding: 10px 16px
-
 [data-page="about"]
-    font-size 16px
+    .me
+        &__relevant
+            position relative
 
+            &--level1
+                @extend .content__relevant
+                
+            &--level2
+                position relative
+                z-index 99
+                
+                &:before 
+                    content ''
+                    position absolute
+                    top 0
+                    left 0
+                    z-index 0
 
+                    width 86%
+                    height 100%
+
+                    background-color rgba(255, 255, 255, 0.9)
+        
+
+[data-page="contact"]
+    #page
+        background none
+    
+    .wrapper
+        background-color third
+        opacity .99
+    
+    .contato
+        width 100%
+        padding 30px 0
+        
+        input[type="text"], input[type="email"], textarea
+            display block
+            margin 10px auto
+            padding 15px
+            width 100%
+            max-width 290px
+            font-size 1.1rem
+
+        &__cont
+            width 100%
+        
+        &__textarea
+            max-width 290px
+            height 160px
+            margin 0 auto 0
+
+        &__label
+            display: block;
+            padding: 6px;
+            width: 30%;
+
+            font-weight 700
+            font-size 1.2rem
+            color #fff
+
+            background: main;
+        
+        &__button
+            margin-top 26px
+            margin-left 19px
+
+            color #ffffff
+            font-size 1.1rem
+            font-weight 900
+            background-color sec
+
+[data-page="curso"]
+    .curso
+        &__relevant
+            position relative
+
+            &--level1
+                @extend .content__relevant
+
+[data-page="podcast"]
+    .podcast
+        &__relevant
+            position relative
+
+            &--level1
+                @extend .content__relevant

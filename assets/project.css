@@ -60,6 +60,62 @@ body {
 .helper__weight--levellight {
   font-weight: 300;
 }
+.helper__relevant--level2 {
+  position: relative;
+  z-index: 99;
+}
+.helper__relevant--level2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 86%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.9);
+}
+.helper__marcado {
+  position: relative;
+  z-index: 10;
+  display: block;
+  padding: 8px 16px;
+  color: #e3453e;
+  font-weight: 900;
+}
+.helper__novocontexto {
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  padding: 40px 0;
+}
+.helper__novocontexto:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00145c;
+  opacity: 0.8;
+}
+.helper__desc {
+  position: relative;
+  z-index: 10;
+  padding: 10px 16px;
+}
+.helper__button {
+  background-color: transparent;
+  border: 0;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.helper__button--contato {
+  width: 30%;
+  height: 50px;
+}
 #page {
   background-image: url("images/waveFriend05Mobile.jpg");
   background-repeat: no-repeat;
@@ -100,8 +156,25 @@ body {
 .header__nav {
   position: absolute;
 }
+.inpage {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  width: 290px;
+}
+.inpage__link {
+  color: #00145c;
+  padding: 10px 14px;
+  width: 100%;
+  max-width: 260px;
+}
+.inpage__link:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
 .content__relevant,
-.me__relevant--level1 {
+[data-page="about"] .me__relevant--level1,
+[data-page="curso"] .curso__relevant--level1,
+[data-page="podcast"] .podcast__relevant--level1 {
   padding: 26px;
   color: #00145c;
   font-size: 11vw;
@@ -109,12 +182,16 @@ body {
   background-color: rgba(255,255,255,0.59);
 }
 .content__relevant--level1,
-.me__relevant--level1--level1 {
+[data-page="about"] .me__relevant--level1--level1,
+[data-page="curso"] .curso__relevant--level1--level1,
+[data-page="podcast"] .podcast__relevant--level1--level1 {
   display: block;
 }
 @media screen and (orientation: landscape) {
   .content__relevant,
-  .me__relevant--level1 {
+  [data-page="about"] .me__relevant--level1,
+  [data-page="curso"] .curso__relevant--level1,
+  [data-page="podcast"] .podcast__relevant--level1 {
     font-size: 7vw;
   }
 }
@@ -229,14 +306,14 @@ body {
     margin-top: 18px;
   }
 }
-.me__relevant {
+[data-page="about"] .me__relevant {
   position: relative;
 }
-.me__relevant--level2 {
+[data-page="about"] .me__relevant--level2 {
   position: relative;
   z-index: 99;
 }
-.me__relevant--level2:before {
+[data-page="about"] .me__relevant--level2:before {
   content: '';
   position: absolute;
   top: 0;
@@ -246,35 +323,55 @@ body {
   height: 100%;
   background-color: rgba(255,255,255,0.9);
 }
-.me__marcado {
-  position: relative;
-  z-index: 10;
-  display: block;
-  padding: 8px 16px;
-  color: #e3453e;
-  font-weight: 900;
+[data-page="contact"] #page {
+  background: none;
 }
-.me__novocontexto {
-  position: relative;
-  color: #fff;
-  font-size: 18px;
-  padding: 40px 0;
+[data-page="contact"] .wrapper {
+  background-color: #e3453e;
+  opacity: 0.99;
 }
-.me__novocontexto:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  z-index: 0;
+[data-page="contact"] .contato {
   width: 100%;
-  height: 100%;
-  background-color: #00145c;
-  opacity: 0.8;
+  padding: 30px 0;
 }
-.me__desc {
+[data-page="contact"] .contato input[type="text"],
+[data-page="contact"] .contato input[type="email"],
+[data-page="contact"] .contato textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 15px;
+  width: 100%;
+  max-width: 290px;
+  font-size: 1.1rem;
+}
+[data-page="contact"] .contato__cont {
+  width: 100%;
+}
+[data-page="contact"] .contato__textarea {
+  max-width: 290px;
+  height: 160px;
+  margin: 0 auto 0;
+}
+[data-page="contact"] .contato__label {
+  display: block;
+  padding: 6px;
+  width: 30%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #00145c;
+}
+[data-page="contact"] .contato__button {
+  margin-top: 26px;
+  margin-left: 19px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 900;
+  background-color: #008ed2;
+}
+[data-page="curso"] .curso__relevant {
   position: relative;
-  z-index: 10;
-  padding: 10px 16px;
 }
-[data-page="about"] {
-  font-size: 16px;
+[data-page="podcast"] .podcast__relevant {
+  position: relative;
 }
